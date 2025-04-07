@@ -11,40 +11,21 @@ void change(Student student) {
 
 int main() {
 
-	Student st1, temp;
+	Student* st1 = nullptr;
+	st1 = new Student;
 
-	st1.name = "Bogdan";
-	st1.age = 14;
-	st1.mark = 9.5;
-	st1.alive = true;
+	st1->name = "Vlad";
+	st1->age = 15;
+	st1->mark = 9.9;
+	st1->alive = true;
+	Student* st2 = st1;
+	cout << "before: " << endl;
+	cout << st1->getString() << endl;
 
-	temp = st1;
+	st2->name = "Matvey";
 
-cout << "Before: " << endl << st1.getString(st1) << endl 
-<< temp.getString(temp);
-	change(st1);
+	cout << "after: " << endl;
+	cout << st1->getString() << endl;
 
-	st1.name = "Vova";
-	/*st2.name = "Ivan";
-	st2.age = 15;
-	st2.mark = 4.5;
-	st2.alive = true;*/
-
-
-	
-	//cout << "After: " << endl << st1.getString(st1) << endl;
-
-
-	//cout << << st2.getString(st2);
-
-	//if (st1.alive != true || st2.alive != true) {
-	//	cout << "The best student is " <<
-	//		(st1.alive != true ? "Ivan" : "Bogdan") << endl;
-	//}
-	//else {
-	//	//string name = st1.mark > st2.mark ? st1.name : st2.name;
-	//	Student t = st1.mark > st2.mark ? st1 : st2;
-	//	cout << "The best student is " << t.name << endl;
-	//}
 	return 0;
 }
