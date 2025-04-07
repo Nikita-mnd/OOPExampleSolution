@@ -22,7 +22,9 @@
     <ClCompile Include="mainn.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="main.h" />
     <ClInclude Include="student.h" />
+    <ClInclude Include="Teacher.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
