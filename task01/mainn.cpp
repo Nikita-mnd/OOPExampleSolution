@@ -1,16 +1,5 @@
 #include "teacher.h"
 
-void test() {
-
-
-
-}
-
-void test(int n) {
-
-
-}
-
 int main() {
 	Student student1{};
 	Student student2("Alex", 15); 

@@ -42,6 +42,10 @@ public:
 		alive = student.alive;
 	}
 
+	~Student() {
+		cout << "destructor..." << endl;
+	}
+
 	string toString() {
 	string s = "name: " + name + ", age: " + to_string(age) +
 		", mark: " + to_string(mark) + ", alive: " +
