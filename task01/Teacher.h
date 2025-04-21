@@ -6,7 +6,7 @@ class Teacher {
 
 public:
 
-	Student getAllBestStudent(Student* students, int size) {
+	/*Student getAllBestStudent(Student* students, int size) {
 
 		for (int i = 0; i < size; i++)
 		{
@@ -17,6 +17,6 @@ public:
 		Student empty;
 
 		return empty;
-	}
+	}*/
 
 };
