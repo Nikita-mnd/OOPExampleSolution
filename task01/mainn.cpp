@@ -1,11 +1,17 @@
-#include "teacher.h"
+#include "initiallizer.h"
 
 int main() {
-	
-	Student st1("Alex", 15);
-	cout << st1.toString() << endl;
+	int count;
+	cout << "Input numbers of students: ";
+	cin >> count;
 
-	Student* pst = new Student;
+	Student* list = nullptr;
+	Initializer initializer;
+	initializer.init(list, count);
 
+	for (int i = 0; i < count; i++)
+	{
+		cout << list[i].toString() << endl;
+	}
 	return 0;
 }

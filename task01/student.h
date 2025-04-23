@@ -7,13 +7,8 @@ public:
 	int countMark;
 	bool alive;
 	//Default-constructor 
-	Student() {
+	Student() : Student("no name" , 13, 10, true) {
 
-		cout << "Default-constructor..." << endl;
-		name = "no name";
-		age = 13;
-		mark = 4.0;
-		alive = true;
 	}
 	//constructor without arguments
 	Student(string nm, int a) {
@@ -21,7 +16,7 @@ public:
 		cout << "Constructor without arguments" << endl;
 		name = nm;
 		age = a;
-		mark = 4.0;
+		marks = nullptr;
 		alive = true;
 	}
 	//canonical-constructor
@@ -38,12 +33,12 @@ public:
 	}
 	//Copy -constructor
 	Student(const Student& student) : Student(student.name, student.age,
-		student.mark, student.alive) {
+		student.marks, student.alive) {
 
 		cout << "Copy -constructor" << endl;
 		name = student.name;
 		age = student.age;
-		mark = student.mark;
+		marks = student.marks;
 		alive = student.alive;
 	}
 	//destructor
@@ -56,7 +51,7 @@ public:
 
 	string toString() {
 		string s = "name: " + name + ", age: " + to_string(age) +
-			", mark: " + to_string(mark) + ", alive: " +
+			", mark: " + to_string(marks) + ", alive: " +
 			(alive ? "yes" : "no") + "\n";
 		return s;
 	}

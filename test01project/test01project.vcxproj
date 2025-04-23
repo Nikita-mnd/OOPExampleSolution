@@ -18,22 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="mainn.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="initiallizer.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="student.h" />
-    <ClInclude Include="Teacher.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d01a9baa-b54d-4ba2-bc71-6d34d9a91b07}</ProjectGuid>
-    <RootNamespace>task01</RootNamespace>
+    <ProjectGuid>{fa88da9c-cc6e-4d10-bce3-02d99c66e020}</ProjectGuid>
+    <RootNamespace>test01project</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>MainProject</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -148,6 +138,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
