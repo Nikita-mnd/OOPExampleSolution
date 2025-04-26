@@ -7,7 +7,17 @@ private:
 	int* marks;
 	int countMark;
 	bool alive;
-
+	string getAllMarks() {
+		if (countMark == 0) {
+			return "[]";
+		}
+		string s = "";
+		for (int i = 0; i < countMark; i++)
+		{
+			s += to_string(marks[i]) + " ";
+		}
+		return s;
+	}
 public:
 	string getName() {
 		return name;
@@ -88,17 +98,7 @@ public:
 		return s;
 	}
 
-	string getAllMarks() {
-		if (countMark == 0) {
-			return "[]";
-		}
-		string s = "";
-		for (int i = 0; i < countMark; i++)
-		{
-			s += to_string(marks[i]) + " ";
-		}
-		return s;
-	}
+	
 
 	int getMark(int index) {
 		return index <= 0 || index > countMark ? 0 : marks[index];
