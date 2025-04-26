@@ -1,11 +1,43 @@
 #include "main.h"
 class Student {
-public:
+private:
+
 	string name;
 	int age;
 	int* marks;
 	int countMark;
 	bool alive;
+
+public:
+	string getName() {
+		return name;
+	}
+
+	void setName(string name){
+		this -> name = name;
+	}
+
+	int getAge() { return age; }
+	void setAge(int age) {
+		if(age >= 13 && age <= 18){this->age = age;}
+	}
+
+	int getCountMark() {
+		return countMark;
+	}
+
+	int* getMarks() {
+		return marks;
+	}
+
+	bool isAlive() {
+		return alive;
+	}
+
+	void setAlive(bool alive) {
+		this->alive = alive;
+	}
+
 	//Default-constructor 
 	Student() : Student("no name" , 13, 10, true) {
 
@@ -51,7 +83,7 @@ public:
 
 	string toString() {
 		string s = "name: " + name + ", age: " + to_string(age) +
-			", mark: " + to_string(marks) + ", alive: " +
+			", mark: " + marks + ", alive: " +
 			(alive ? "yes" : "no") + "\n";
 		return s;
 	}
