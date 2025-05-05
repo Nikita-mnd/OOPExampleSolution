@@ -1,113 +1,115 @@
-#include "main.h"
-class Student {
-private:
+#include <iostream>
+#include <string>
+using namespace std;
 
+
+
+// Entity-class
+class Student {
+public:
+	// fields
 	string name;
 	int age;
 	int* marks;
-	int countMark;
+	int countMarks;
 	bool alive;
-	string getAllMarks() {
-		if (countMark == 0) {
-			return "[]";
-		}
-		string s = "";
-		for (int i = 0; i < countMark; i++)
-		{
-			s += to_string(marks[i]) + " ";
-		}
-		return s;
-	}
-public:
-	string getName() {
-		return name;
+
+	// constructors
+
+	// default-constructors or constructors without arguments
+	Student() : Student("no name", 13, 10, true) {
+		//	cout << "default-constructor..." << endl;		
 	}
 
-	void setName(string name){
-		this -> name = name;
+	// constructor with arguments
+	Student(string name) : Student(name, 13) {
+		//cout << "constructor with arguments (name)..." << endl;
 	}
 
-	int getAge() { return age; }
-	void setAge(int age) {
-		if(age >= 13 && age <= 18){this->age = age;}
+	// constructor with arguments
+	Student(string name, int age) : Student(name, age, 0, true) {
+		//cout << "constructor with arguments (name, age)..." << endl;	
 	}
 
-	int getCountMark() {
-		return countMark;
-	}
-
-	int* getMarks() {
-		return marks;
-	}
-
-	bool isAlive() {
-		return alive;
-	}
-
-	void setAlive(bool alive) {
-		this->alive = alive;
-	}
-
-	//Default-constructor 
-	Student() : Student("no name" , 13, 10, true) {
-
-	}
-	//constructor without arguments
-	Student(string nm, int a) {
-
-		cout << "Constructor without arguments" << endl;
-		name = nm;
-		age = a;
-		marks = nullptr;
-		alive = true;
-	}
-	//canonical-constructor
-	Student(string name, int age, int mark, bool alive) {
-
-		cout << "Constructor without arguments" << endl;
+	// canonical-constructor
+	Student(string name, int age, int countMark, bool alive) {
+		//cout << "canonical-constructor ..." << endl;
 		this->name = name;
 		this->age = age;
-		this->alive = alive;
+		this->countMarks = countMark;
 		marks = new int[countMark];
-		for (int i = 0; i < countMark; i++) {
-			this->marks[i] = marks[i];
+
+		for (int i = 0; i < countMark; i++)
+		{
+			marks[i] = 4;
+		}
+
+		this->alive = alive;
+	}
+
+	// copy-constructor
+	Student(const Student& student) : Student(student.name,
+		student.age, student.countMarks, student.alive)
+	{
+		cout << "copy-constructor ..." << endl;
+
+		for (int i = 0; i < countMarks; i++)
+		{
+			marks[i] = student.marks[i];
 		}
 	}
-	//Copy -constructor
-	Student(const Student& student) : Student(student.name, student.age,
-		student.marks, student.alive) {
 
-		cout << "Copy -constructor" << endl;
-		name = student.name;
-		age = student.age;
-		marks = student.marks;
-		alive = student.alive;
-	}
-	//destructor
+	// destructor
 	~Student() {
-		cout << "destructor..." << endl;
-		if (marks) {
-			delete[] marks;
+		//cout << "destructor..." << endl;
+
+		if (countMarks > 0) {
+			delete[] this->marks;
 		}
 	}
 
+	// methods
 	string toString() {
-		string s = "name: " + name + ", age: " + to_string(age) +
-			", mark: " + marks + ", alive: " +
-			(alive ? "yes" : "no") + "\n";
+		string s = "Name: " + this->name;
+		s += ", age: " + to_string(this->age);
+		s += ", marks " + this->convert();
+		s += ", alive: ";
+		s += this->alive ? "yes" : "no";
 		return s;
 	}
 
-	
+	string convert() {
+		string s = "[";
+
+		if (this->countMarks > 0) {
+			for (int i = 0; i < this->countMarks - 1; i++)
+			{
+				s += to_string(this->marks[i]) + ", ";
+			}
+
+			s += to_string(this->marks[this->countMarks - 1]);
+		}
+
+		s += "]";
+
+		return s;
+	}
 
 	int getMark(int index) {
-		return index <= 0 || index > countMark ? 0 : marks[index];
-	}
-
-	int setMark(int index, int mark) {
-		if (index >= 0 && index < countMark) {
-			marks[index] = mark;
+		if (countMarks == 0 || index < 0
+			|| index >= countMarks) {
+			return -1;
 		}
+
+		return marks[index];
 	}
 
+	void setMark(int index, int mark) {
+		if (countMarks == 0 || index < 0 || index >= countMarks
+			|| mark < 0 || mark > 10) {
+			return;
+		}
+
+		marks[index] = mark;
+	}
 };

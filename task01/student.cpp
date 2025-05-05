@@ -1,4 +1,7 @@
-#include "main.h"
+#include "student.h"
+
+string Student::getMark
+
 class Student {
 private:
 
