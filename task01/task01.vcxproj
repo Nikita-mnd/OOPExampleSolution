@@ -19,13 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Gruop.cpp" />
     <ClCompile Include="initializer.cpp" />
     <ClCompile Include="mainn.cpp" />
+    <ClCompile Include="Manager.cpp" />
     <ClCompile Include="student.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Gruop.h" />
     <ClInclude Include="initiallizer.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="Teacher.h" />
   </ItemGroup>

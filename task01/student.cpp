@@ -1,6 +1,6 @@
 #include "student.h"
 
-string Student::getMark
+string Student::getMark;
 
 class Student {
 private:
