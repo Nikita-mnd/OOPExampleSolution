@@ -20,18 +20,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Gruop.cpp" />
+    <ClCompile Include="Human.cpp" />
     <ClCompile Include="initializer.cpp" />
     <ClCompile Include="mainn.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="student.cpp" />
+    <ClCompile Include="Worker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Gruop.h" />
+    <ClInclude Include="Human.h" />
     <ClInclude Include="initiallizer.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="Teacher.h" />
+    <ClInclude Include="Worker.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
