@@ -142,6 +142,7 @@
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="AnimalStudio.cpp" />
     <ClCompile Include="Cat.cpp" />
+    <ClCompile Include="Crocodile.cpp" />
     <ClCompile Include="Dog.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -149,6 +150,7 @@
     <ClInclude Include="Animal.h" />
     <ClInclude Include="AnimalStudio.h" />
     <ClInclude Include="Cat.h" />
+    <ClInclude Include="Crocodile.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>

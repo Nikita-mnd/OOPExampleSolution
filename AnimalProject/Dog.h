@@ -7,7 +7,7 @@ public:
 
     Dog(string name): Animal(name){}
 
-    void getVoice() {
+    void getVoice() override {
         cout << "Gauu...gauu...gauu..." << endl;
     }
 

@@ -1,13 +1,15 @@
 #pragma once
 #include "main.h"
+#include "Dog.h"
+#include "Cat.h"
 class Animal
 {
 public:
-string name;
+	string name;
 
-Animal(string name) : name(name){}
-	
-	void getVoice() {
+	Animal(string name) : name(name) {}
+
+	virtual void getVoice() {
 		cout << "..." << endl;
 	}
 
