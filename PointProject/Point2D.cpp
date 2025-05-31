@@ -19,10 +19,10 @@ Point2D Point2D::minus() {
 	return Point2D(-x, -y);
 }
 
-Point2D Point2D::operator+(Point2D point);
-Point2D  Point2D::operator+(int value);
-Point2D  Point2D::operator-(Point2D point);
-Point2D  Point2D::operator-(int value);
-Point2D  Point2D::operator-();
-Point2D  Point2D::operator*(int value);
-Point2D  Point2D::operator/();
+Point2D operator+(Point2D point);
+Point2D operator+(int value);
+Point2D operator-(Point2D point);
+Point2D operator-(int value);
+Point2D operator-();
+Point2D operator*(int value);
+Point2D operator/();
