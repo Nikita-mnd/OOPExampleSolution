@@ -1,27 +1,16 @@
 #pragma once
-#include "Bus.h"
-#include "Truck.h"
-#include "Car.h"
+#include "Transpot.h"
+
 class GasStation
 {
 public:
-	int calculateTotalGas(Car* cars, Bus* buses, Truck trucks, int size) {
+	int calculateTotalGas(Transpot** trancport ,int size) {
 		int total = 0;
 
 		for (int i = 0; i < size; i++) {
 
-			total += cars[i].volume;
+			total += trancport[i] ->tank;
 
-		}
-
-		for (int i = 0; i < size; i++)
-		{
-			total += buses[i].tank;
-		}
-
-		for (int i = 0; i < size; i++)
-		{
-			total += buses[i].tank;
 		}
 
 		return total;

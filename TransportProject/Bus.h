@@ -1,11 +1,12 @@
+#include "Transpot.h"
 #pragma once
-class Bus
+class Bus : public Transpot
 {
 public:
-	int tank;
+
 	int count;
 
-	Bus(int tank) : tank(tank){};
+	Bus(int tank) : Transpot(tank){}
 
 };
 

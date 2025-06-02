@@ -1,11 +1,12 @@
 #pragma once
-class Car
+#include "Transpot.h"
+class Car : public Transpot
 {
 public:
-	int volume;
+	
 	int speed;
 	double price;
 
-	Car(int volme) : volume(volume) {};
+	Car(int tank) : Transpot(tank) {};
 };
 
