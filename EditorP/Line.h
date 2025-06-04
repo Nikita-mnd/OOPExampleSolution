@@ -41,9 +41,12 @@ public:
 
 	int find_distance() override {
 		if (x1 < x2) {
-			swap
+			swap(x1, x2);
 		}
-		int dis = sqrt((x * x) + (y * y));
+		if (y1 < y2) {
+			swap(y1, y2);
+		}
+		int dis = sqrt((x1 * x1) + (y1 * y1));
 		return dis;
 	}
 
