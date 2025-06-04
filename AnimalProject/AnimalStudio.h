@@ -1,16 +1,14 @@
+
 #pragma once
-#include"Animal.h"
-#include"Cat.h"
-#include"Dog.h"
+#include "Animal.h"
+
 class AnimalStudio
 {
 public:
-	void justDoIt(Animal** animal, int size) {
+	void makeItSound(Animal** animals, int size) {
 		for (int i = 0; i < size; i++)
 		{
-			animal[i]->getVoice();
+			animals[i]->getVoice();
 		}
-
 	}
 };
-

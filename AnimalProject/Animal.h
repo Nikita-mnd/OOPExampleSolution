@@ -1,7 +1,7 @@
+
 #pragma once
 #include "main.h"
-#include "Dog.h"
-#include "Cat.h"
+
 class Animal
 {
 public:
@@ -12,6 +12,4 @@ public:
 	virtual void getVoice() {
 		cout << "..." << endl;
 	}
-
 };
-

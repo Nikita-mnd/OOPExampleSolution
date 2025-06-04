@@ -1,15 +1,9 @@
+
 #pragma once
 #include "Animal.h"
-class Crocodile :
-    public Animal
+
+class Crocodile : public Animal
 {
 public:
-
-    Crocodile(string name) : Animal(name){}
-
-    void getVoice() override {
-        cout << "Nyam...nyam...nyam..." << endl;
-    }
-
+	Crocodile(string name) : Animal(name) {	}
 };
-
