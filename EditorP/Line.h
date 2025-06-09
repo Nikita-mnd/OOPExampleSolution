@@ -8,12 +8,7 @@ private:
 public:
 	Line(int x1, int y1, int x2, int y2) : Shape(x, y) {}
 
-	string information() override {
-
-		string inf = "Line, x1 = " + to_string(x1) + ", x2 = " + to_string(x2) +
-			", y1 = " + to_string(y1) + ", y2 = " + to_string(y2);
-		return inf;
-	}
+	string information() override;
 
 	double calculating_per() override {
 		if (x1 != x2 || y1 != x2) {

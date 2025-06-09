@@ -1,4 +1,3 @@
-
 #pragma once
 #include "Animal.h"
 
@@ -8,6 +7,7 @@ public:
 	Cat(string name) : Animal(name) {}
 
 	void getVoice() override {
+		Animal::getVoice();
 		cout << "Myaw... myaw... myaw..." << endl;
 	}
 };

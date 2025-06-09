@@ -1,15 +1,26 @@
-
 #pragma once
 #include "main.h"
 
+// abstract class
 class Animal
 {
 public:
+	static int count;
 	string name;
-
-	Animal(string name) : name(name) {}
-
-	virtual void getVoice() {
-		cout << "..." << endl;
+	Animal() {
+		count++;
 	}
+	Animal(string name) : name(name) {
+		count++;
+	}
+	~Animal() {
+		count--;
+	}
+
+	int getCount();
+
+	//// overriding
+	//virtual void getVoice() {
+	//	//...
+	//}
 };

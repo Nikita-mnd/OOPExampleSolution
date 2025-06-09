@@ -1,24 +1,26 @@
-﻿
-#include "AnimalStudio.h"
+﻿#include "AnimalStudio.h"
 #include "Cat.h"
 #include "Dog.h"
 #include "Crocodile.h"
 
-// äčíŕěč÷ĺńęčé ďîëčěîđôčçě (dynamic polymorphism)
-// ďîçäíĺĺ ńâ˙çűâŕíčĺ (dynamic binding)
-// ďĺđĺîďđĺäĺëĺíčĺ (overriding)
-
 int main() {
-	AnimalStudio studio;
+	cout << Animal::count << endl;
+	Animal a1, a2, a3;
+	{
 
-	Dog* dog = new Dog("Laika");
-	Cat* cat = new Cat("Adel");
-	Crocodile* crocodile = new Crocodile("Pushok");
-
+		Animal a4;
+		cout<< Animal::getCount() << endl;
+		cout << a4.getCount() << endl;
+	}
+	/*Animal** animals;
 	int size = 5;
-	Animal** animals = new Animal * [size] {dog, cat, crocodile, dog, cat};
 
-	studio.makeItSound(animals, size);
 
-	return 0;
+	animals = new Animal * [size] {new Dog("Sharly"), new Cat("Adel"),
+		new Crocodile("Aligator")};
+
+
+	cout << animals[0]->count<< endl;*/
+
+		return 0;
 }
