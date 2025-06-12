@@ -1,17 +1,15 @@
 #include "Point.h"
 
-string Point::information() {
-
-
-
+void Point::information() {
+	cout << "x: " << x << ", y: " << y << endl;
 }
 
-double Point::calculating_per() override {
-
-
-
+double Point::calculating_per() {
+	return 0;
 }
-
-double Point::calculating_area() override;
-
-int Point::find_distance() override;
+double Point::calculating_area() {
+	return 0;
+}
+int Point::find_distance() {
+	return sqrt((x * x) + (y * y));
+}

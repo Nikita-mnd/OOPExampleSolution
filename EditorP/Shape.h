@@ -8,7 +8,7 @@ public:
 
 	Shape(int x, int y) : x(0), y(0){}
 
-	virtual string information() = 0;
+	virtual void information() = 0;
 
 	virtual double calculating_per() = 0;
 

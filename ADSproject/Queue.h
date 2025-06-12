@@ -16,4 +16,3 @@ public:
 	bool isEmpty();
 	string toString();
 };
-

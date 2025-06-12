@@ -52,7 +52,7 @@ int Queue::dequeue() {
 		return first;
 	}
 
-		return 0;
+	return 0;
 }
 int Queue::peek() {
 

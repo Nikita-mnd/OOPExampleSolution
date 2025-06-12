@@ -11,7 +11,7 @@ ArrayList::~ArrayList() {
 void ArrayList::add(int value) {
 
 	if (array != nullptr) {
-		int* newArray = new int[size+1];
+		int* newArray = new int[size + 1];
 
 		for (int i = ; i < size; i++) {
 			newArray[i] = array[i]
